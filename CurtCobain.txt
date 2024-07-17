@@ -1,0 +1,11 @@
+UNTUK SILOAM DAN SOCIOLA DICOBA LOGIN NEGATIF PAKAI MANUAL ATAU SELENIUM....
+
+https://dev.ptdika.com/staging.siloam/panel/login/
+username : admindika
+password : d1k4@passw0rd
+
+https://dev.ptdika.com/staging.sociola/login
+username : admintiara2
+password : a
+
+FACEBOOK DICOBA LOGIN PAKAI SELENIUM...........
