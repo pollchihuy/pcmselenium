@@ -80,7 +80,7 @@
                             <manifest>
                                 <addClasspath>true</addClasspath>
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.JavaHeapSize</mainClass>-->
-                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.OutputParameter</mainClass>
+                                <mainClass>coid.juaracoding.pcmselenium.MainCermati</mainClass>
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.TestMemory</mainClass>-->
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.JavaHeapSizeModif</mainClass>-->
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.TestMemory</mainClass>-->

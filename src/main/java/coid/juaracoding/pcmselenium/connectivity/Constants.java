@@ -2,9 +2,9 @@ package coid.juaracoding.pcmselenium.connectivity;
 
 public class Constants {
 
-	public static final int TIMEOUT = 15;
-	public static final int TIMEOUT_DELAY = 2;
-//	public static final String GLOB_PARAM_DELAY = "y";
+	public static final int TIMEOUT = 30;
+	public static final int TIMEOUT_DELAY = 1;
+	public static final String GLOB_PARAM_DELAY = "y";
 	public static final String CHROME = "Chrome";
 	public static final String FIREFOX = "Firefox";
 	public static final String EDGE = "Edge";
