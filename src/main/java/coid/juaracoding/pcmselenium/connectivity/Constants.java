@@ -11,5 +11,5 @@ public class Constants {
 	public static final String OPERA = "Opera";
 	public static final String IE = "IE";
 	public static final String SAFARI = "Safari";
-//	public static final String URL_LOGIN = "https://practicetestautomation.com/practice-test-login/";
+	public static final String URL_LOGIN = "https://practicetestautomation.com/practice-test-login/";
 }

@@ -1,5 +1,7 @@
 package coid.juaracoding.pcmselenium;
 
+import java.util.Random;
+
 /*
 IntelliJ IDEA 2024.1.4 (Ultimate Edition)
 Build #IU-241.18034.62, built on June 21, 2024
@@ -12,9 +14,13 @@ Version 1.0
 public class MainMainan {
 
     public static void main(String[] args) {
-        System.out.println("0812860132541451".length());
-
-        char chX = 7;
-        System.out.println(chX);
+        Random r = new Random();
+        String strRand = "abcdefghijklmnopqrstuvwxyz";
+        int intLoop = r.nextInt(5,21);
+        String strResult = "";
+        for (int i = 0; i < intLoop; i++) {
+            strResult = strResult + strRand.charAt(r.nextInt(0,strRand.length()));
+        }
+        System.out.println(strResult);
     }
 }

@@ -42,4 +42,19 @@ public class AESGeneratedKey {
         }
         return result.toString();
     }
+// basic auth
+// username : automation
+// passowrd : Auto@4321
+
+// basic auth
+// username : auto2000
+// passowrd : Mation@4321
+
+    //user-db : root1 -> 098uhgiouehtroij
+    //pwd-db : root2
+
+    //Algorithm Encryption Standard
+//    proses enkripsi
+// root1 -> a3dd1c82e80130029846965f98cb0a6a6c0d3b675625ef134c6c3b459616ee3c -> 98ry9h345uijhoij1o3ji
+// 98ry9h345uijhoij1o3ji -> a3dd1c82e80130029846965f98cb0a6a6c0d3b675625ef134c6c3b459616ee3c -> root1
 }

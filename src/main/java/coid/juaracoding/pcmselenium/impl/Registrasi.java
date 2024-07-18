@@ -6,6 +6,7 @@ import coid.juaracoding.pcmselenium.page.PageDaftarAkun;
 import coid.juaracoding.pcmselenium.util.DataGenerator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /*
@@ -22,7 +23,7 @@ public class Registrasi {
     private PageDaftarAkun pageRegis;
     private DataGenerator dataGenerator;
 
-    @BeforeSuite
+    @BeforeTest
     public void initCase(){
         DriverSingleton.getInstance(Constants.FIREFOX);
         this.driver = DriverSingleton.getDriver();
@@ -31,6 +32,7 @@ public class Registrasi {
         this.pageRegis = new PageDaftarAkun();
     }
 
+    /** informasi apa kek gituh !! */
     @Test(priority = 1)
     public void inputRegis(){
         String strPassword = dataGenerator.dataPassword();
@@ -42,5 +44,4 @@ public class Registrasi {
         pageRegis.inputNamaBelakang(dataGenerator.dataNamaBelakang());
         DriverSingleton.closeObjectInstance();
     }
-
 }

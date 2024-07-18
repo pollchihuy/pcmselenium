@@ -18,6 +18,13 @@
     <!--    Pastikan java version saat menulis command java -version dan mvn -version di cmd itu harus sama versi nya -->
     <!--    command buat run maven -> mvn clean compile assembly:single-->
     <dependencies>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15to18</artifactId>
+            <version>1.72</version>
+        </dependency>
+
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
@@ -80,7 +87,7 @@
                             <manifest>
                                 <addClasspath>true</addClasspath>
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.JavaHeapSize</mainClass>-->
-                                <mainClass>coid.juaracoding.pcmselenium.MainCermati</mainClass>
+                                <mainClass>coid.juaracoding.pcmselenium.ContohEnkripDekrip</mainClass>
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.TestMemory</mainClass>-->
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.JavaHeapSizeModif</mainClass>-->
                                 <!--                                <mainClass>coid.juaracoding.pcmcobacoba.preparation.TestMemory</mainClass>-->

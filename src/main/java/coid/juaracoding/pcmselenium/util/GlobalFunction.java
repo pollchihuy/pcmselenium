@@ -14,6 +14,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 public class GlobalFunction {
 
@@ -63,6 +64,18 @@ public class GlobalFunction {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String generateTextRandom(int intMax){
+        Random r = new Random();
+        String strRand = "abcdefghijklmnopqrstuvwxyz";
+        int intLoop = r.nextInt(0,intMax);
+        String strResult = "";
+        for (int i = 0; i < intLoop; i++) {
+            strResult = strResult + strRand.charAt(r.nextInt(0,strRand.length()));
+        }
+        System.out.println(strResult);
+        return strResult;
     }
 
 //    /** Fungsional OCR mengubah image yang berisi text menjadi String */
