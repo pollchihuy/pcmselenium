@@ -1,6 +1,6 @@
 package coid.juaracoding.pcmselenium.page;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
+import coid.juaracoding.pcmselenium.util.Constants;
 import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.util.GlobalFunction;
 import org.openqa.selenium.WebDriver;
@@ -29,10 +29,6 @@ public class LoginPage {
     @FindBy(xpath = "//h2[normalize-space()='Test login']")
     private WebElement labelLogin;
 
-    public LoginPage(){
-        this.driver= DriverSingleton.getDriver();
-        PageFactory.initElements(driver,this);
-    }
     public LoginPage(WebDriver driver) {
         this.driver= driver;
         PageFactory.initElements(driver,this);
@@ -83,11 +79,13 @@ public class LoginPage {
     }
 
     public String notificationLoginError(){
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         return notifLoginError ==null?"": new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
                 .until(ExpectedConditions.visibilityOf(notifLoginError)).getText();
     }
 
     public String loginFormValidation(){
+        GlobalFunction.delay(Constants.TIMEOUT_DELAY);
         return labelLogin==null?"":new WebDriverWait(driver, Duration.ofSeconds(Constants.TIMEOUT_DELAY))
                 .until(ExpectedConditions.visibilityOf(labelLogin)).getText();
     }

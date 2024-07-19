@@ -1,6 +1,6 @@
 package coid.juaracoding.pcmselenium.impl;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
+import coid.juaracoding.pcmselenium.util.Constants;
 import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.page.HomePage;
 import coid.juaracoding.pcmselenium.page.LoginPage;
@@ -20,7 +20,8 @@ public class LoginPositif {
 
     @BeforeTest
     public void initCase(){
-        DriverSingleton.getInstance(Constants.FIREFOX);
+//        DriverSingleton.getInstance(Constants.FIREFOX);
+        DriverSingleton.getInstance(Constants.CHROME);
         this.driver = DriverSingleton.getDriver();
         this.driver.get(Constants.URL_LOGIN);
         loginPage = new LoginPage(driver);
@@ -37,7 +38,7 @@ public class LoginPositif {
         System.out.println("Home Page Validation "+strValidation);
 
         /** tambahkan step logout */
-        Assert.assertEquals("Congratulations student. You successfully logged iin!",strValidation);//STEP-5
+        Assert.assertEquals("Congratulations student. You successfully logged in!",strValidation);//STEP-5
     }
 
     @Test(priority = 1)

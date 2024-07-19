@@ -1,8 +1,9 @@
 package coid.juaracoding.pcmselenium.impl;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
+import coid.juaracoding.pcmselenium.util.Constants;
 import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.page.LoginPage;
+import coid.juaracoding.pcmselenium.util.GlobalFunction;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -18,10 +19,12 @@ public class LoginNegatif {
 
     @BeforeTest
     public void initCase(){
-        DriverSingleton.getInstance(Constants.FIREFOX);
+//        DriverSingleton.getInstance(Constants.FIREFOX);
+        DriverSingleton.getInstance(Constants.CHROME);
         this.driver = DriverSingleton.getDriver();
         this.driver.get(Constants.URL_LOGIN);
         loginPage = new LoginPage(driver);
+        GlobalFunction.loginModeDev();
 //        loginPage = new LoginPage(driver);
     }
     /** Untuk test case input username dan password kosong */

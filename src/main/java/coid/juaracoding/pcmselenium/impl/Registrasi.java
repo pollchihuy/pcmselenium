@@ -1,11 +1,10 @@
 package coid.juaracoding.pcmselenium.impl;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
+import coid.juaracoding.pcmselenium.util.Constants;
 import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.page.PageDaftarAkun;
 import coid.juaracoding.pcmselenium.util.DataGenerator;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 

@@ -1,6 +1,5 @@
 package coid.juaracoding.pcmselenium.util;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -57,6 +56,13 @@ public class GlobalFunction {
         }
     }
 
+    public static void loginModeDev(){
+        if(Constants.DEV_MODE.equalsIgnoreCase("Y")){
+            /** Login Positif */
+        }
+//        username password 1
+    }
+
     /** ini untuk proses Asyncronous */
     public static  void delay(int intDetik,String strNull){
         try {
@@ -104,7 +110,8 @@ public class GlobalFunction {
         }
     }
 
-    /** melakukan download file dari url
+    /**
+     melakukan download file dari url
      Parameter targetDirectory harus berbentuk Path + penamaan file
      */
     public static void downloadImage(String sourceUrl, String targetDirectory)
@@ -121,6 +128,4 @@ public class GlobalFunction {
             System.out.println(e.getMessage());
         }
     }
-
-
 }

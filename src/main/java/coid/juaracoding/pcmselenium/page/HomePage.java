@@ -1,6 +1,6 @@
 package coid.juaracoding.pcmselenium.page;
 
-import coid.juaracoding.pcmselenium.connectivity.Constants;
+import coid.juaracoding.pcmselenium.util.Constants;
 import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.util.GlobalFunction;
 import org.openqa.selenium.WebDriver;

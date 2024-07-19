@@ -1,6 +1,6 @@
 //package coid.juaracoding.pcmselenium.impl;
 //
-//import coid.juaracoding.pcmselenium.connectivity.Constants;
+//import coid.juaracoding.pcmselenium.util.Constants;
 //import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 //import coid.juaracoding.pcmselenium.page.HomePage;
 //import coid.juaracoding.pcmselenium.page.LoginPage;
