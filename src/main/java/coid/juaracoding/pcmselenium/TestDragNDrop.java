@@ -1,12 +1,14 @@
 package coid.juaracoding.pcmselenium;
 
-import coid.juaracoding.pcmselenium.connectivity.DriverSingleton;
 import coid.juaracoding.pcmselenium.util.GlobalFunction;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.io.File;
 
 /*
 IntelliJ IDEA 2024.1.4 (Ultimate Edition)
@@ -21,24 +23,62 @@ public class TestDragNDrop {
 
 
     public static void main(String[] args) {
-        WebDriverManager.firefoxdriver();
-        WebDriver driver = new FirefoxDriver();
+        WebDriverManager.chromedriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://png2jpg.com/");
         driver.manage().window().maximize();
-        WebElement bucketUpload = driver.findElement(By.xpath("//div[@class='files__drop-caption drop-caption']//*[name()='svg']"));
-        WebElement btnModals = driver.findElement(By.xpath("//div[@class='files__drop-caption drop-caption']//*[name()='svg']"));
-        GlobalFunction.delay(3);
-        WebElement btnUpload = driver.findElement(By.xpath("//label[@aria-label='UPLOAD FILES']"));
-        GlobalFunction.delay(3);
-        btnUpload.sendKeys("D:\\download-automation\\gambar-180-abu-abu.png");
-        btnUpload.click();
-        driver.switchTo().alert().dismiss();
-        driver.switchTo().alert().accept();
-        driver.switchTo().alert().sendKeys("Hello, Good Morning");
-        driver.switchTo().alert().accept();
-        btnModals.click();
-        WebElement test = driver.findElement(By.xpath("//input[@placeholder='Username']"));
-        test.getAttribute("required");//true atau false
-
+        /**
+         * MASUKKAN PATH FILE YANG MAU DI UPLOAD KE SINI CONTOH NYA : D:\download-automation\gambar-180-abu-abu.png
+         * MASUKKAN PATH FILE YANG MAU DI UPLOAD KE SINI CONTOH NYA : D:\download-automation\gambar-180-abu-abu.png
+         * MASUKKAN PATH FILE YANG MAU DI UPLOAD KE SINI CONTOH NYA : D:\download-automation\gambar-180-abu-abu.png
+         * MASUKKAN PATH FILE YANG MAU DI UPLOAD KE SINI CONTOH NYA : D:\download-automation\gambar-180-abu-abu.png
+         * MASUKKAN PATH FILE YANG MAU DI UPLOAD KE SINI CONTOH NYA : D:\download-automation\gambar-180-abu-abu.png
+         */
+        File uploadFile = new File("MASUKKAN_PATH_FILE_KESINI");
+        GlobalFunction.delay(1);
+        WebElement btnUpload = driver.findElement(By.xpath("//*[@id=\"fileSelector\"]"));
+        GlobalFunction.delay(1);
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
+        btnUpload.sendKeys(uploadFile.getAbsolutePath());
     }
 }
