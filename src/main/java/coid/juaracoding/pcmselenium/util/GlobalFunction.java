@@ -1,5 +1,7 @@
 package coid.juaracoding.pcmselenium.util;
 
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -54,6 +56,24 @@ public class GlobalFunction {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    /** Fungsional OCR mengubah image yang berisi text menjadi String */
+    public static String generateTextOCR(String pathFile){
+        String result = "";
+        try {
+            File image = new File(pathFile);
+            Tesseract tesseract = new Tesseract();
+            /** arahkan ke tessa data folder OCR nya */
+            tesseract.setDatapath("D:\\tessa\\tessdata-3.04.00");
+            tesseract.setLanguage("eng");
+            tesseract.setPageSegMode(1);
+            tesseract.setOcrEngineMode(1);
+            result = tesseract.doOCR(image);
+        } catch (TesseractException e) {
+            System.out.println(e.getMessage());
+        }
+        return result;
     }
 
     public static void loginModeDev(){

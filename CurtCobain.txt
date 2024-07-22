@@ -1,7 +1,7 @@
 UNTUK SILOAM DAN SOCIOLA DICOBA LOGIN NEGATIF PAKAI MANUAL ATAU SELENIUM....
 
 https://dev.ptdika.com/staging.siloam/panel/login/
-==buat admin==
+==buat user==
 username : K6400001
 password : a
 
